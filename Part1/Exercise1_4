@@ -1,0 +1,16 @@
+docker run -d devopsdockeruh/exec_bash_exercise
+6bb2e12521bb906eac35f6ac24077189034ff6f87f4a5547f542c61e3f7e232a
+docker exec -it 6bb2e12521bb bash
+root@6bb2e12521bb:/usr/app# tail ./logs.txt
+Thu, 15 Aug 2019 18:07:32 GMT
+Thu, 15 Aug 2019 18:07:35 GMT
+Secret message is:
+"Docker is easy"
+Thu, 15 Aug 2019 18:07:41 GMT
+Thu, 15 Aug 2019 18:07:44 GMT
+Thu, 15 Aug 2019 18:07:47 GMT
+Thu, 15 Aug 2019 18:07:50 GMT
+Secret message is:
+"Docker is easy"
+root@6bb2e12521bb:/usr/app# exit
+exit
