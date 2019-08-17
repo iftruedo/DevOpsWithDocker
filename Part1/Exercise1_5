@@ -1,0 +1,31 @@
+docker run -it ubuntu sh -c 'echo "Input website:"; read website; echo "Searching.."; apt-get -y update > /dev/null; apt-get -y install curl > /dev/null; sleep 1; curl http://$website;'
+Unable to find image 'ubuntu:latest' locally
+latest: Pulling from library/ubuntu
+35c102085707: Pulling fs layer
+251f5509d51d: Pulling fs layer
+8e829fe70a46: Pulling fs layer
+6001e1789921: Pulling fs layer
+6001e1789921: Waiting
+8e829fe70a46: Verifying Checksum
+8e829fe70a46: Download complete
+251f5509d51d: Download complete
+6001e1789921: Download complete
+35c102085707: Verifying Checksum
+35c102085707: Download complete
+35c102085707: Pull complete
+251f5509d51d: Pull complete
+8e829fe70a46: Pull complete
+6001e1789921: Pull complete
+Digest: sha256:d1d454df0f579c6be4d8161d227462d69e163a8ff9d20a847533989cf0c94d90
+Status: Downloaded newer image for ubuntu:latest
+Input website:
+helsinki.fi
+Searching..
+debconf: delaying package configuration, since apt-utils is not installed
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>301 Moved Permanently</title>
+</head><body>
+<h1>Moved Permanently</h1>
+<p>The document has moved <a href="http://www.helsinki.fi/">here</a>.</p>
+</body></html>
