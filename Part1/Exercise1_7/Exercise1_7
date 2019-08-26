@@ -1,0 +1,74 @@
+docker build -t curler .
+
+Sending build context to Docker daemon  3.584kB
+Step 1/6 : FROM ubuntu:16.04
+16.04: Pulling from library/ubuntu
+f7277927d38a: Pulling fs layer
+8d3eac894db4: Pulling fs layer
+edf72af6d627: Pulling fs layer
+3e4f86211d23: Pulling fs layer
+3e4f86211d23: Waiting
+8d3eac894db4: Verifying Checksum
+8d3eac894db4: Download complete
+edf72af6d627: Verifying Checksum
+edf72af6d627: Download complete
+3e4f86211d23: Download complete
+f7277927d38a: Download complete
+f7277927d38a: Pull complete
+8d3eac894db4: Pull complete
+edf72af6d627: Pull complete
+3e4f86211d23: Pull complete
+Digest: sha256:97b54e5692c27072234ff958a7442dde4266af21e7b688e7fca5dc5acc8ed7d9
+Status: Downloaded newer image for ubuntu:16.04
+ ---> 5e13f8dd4c1a
+Step 2/6 : RUN apt-get update > /dev/null && apt-get install -y curl > /dev/null
+ ---> Running in 155b470e3a10
+[91mdebconf: delaying package configuration, since apt-utils is not installed
+[0mRemoving intermediate container 155b470e3a10
+ ---> 1f9ae96bf459
+Step 3/6 : COPY script.sh .
+ ---> d45c958e9421
+Step 4/6 : RUN ls
+ ---> Running in dbf05bd93179
+bin
+boot
+dev
+etc
+home
+lib
+lib64
+media
+mnt
+opt
+proc
+root
+run
+sbin
+script.sh
+srv
+sys
+tmp
+usr
+var
+Removing intermediate container dbf05bd93179
+ ---> eecb60911e72
+Step 5/6 : RUN ["chmod","+x","./script.sh"]
+ ---> Running in bbd90bab71f6
+Removing intermediate container bbd90bab71f6
+ ---> 7964440aaa69
+Step 6/6 : CMD ./script.sh
+ ---> Running in 3a7e2d53c0e1
+Removing intermediate container 3a7e2d53c0e1
+ ---> a83fc1a71974
+Successfully built a83fc1a71974
+Successfully tagged curler:latest
+Input website:
+helsinki.fi
+Searching..
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>301 Moved Permanently</title>
+</head><body>
+<h1>Moved Permanently</h1>
+<p>The document has moved <a href="http://www.helsinki.fi/">here</a>.</p>
+</body></html>
