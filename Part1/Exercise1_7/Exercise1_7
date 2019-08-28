@@ -1,4 +1,4 @@
-docker build - curler .
+docker build -t curler .
 
 Sending build context to Docker daemon  3.584kB
 Step 1/6 : FROM ubuntu:16.04
