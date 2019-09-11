@@ -1,0 +1,60 @@
+touch logs.txt
+docker run -v $(pwd)/logs.txt:/usr/app/logs.txt devopsdockeruh/first_volume_exercise
+Unable to find image 'devopsdockeruh/first_volume_exercise:latest' locally
+latest: Pulling from devopsdockeruh/first_volume_exercise
+741437d97401: Pulling fs layer
+34d8874714d7: Pulling fs layer
+0a108aa26679: Pulling fs layer
+7f0334c36886: Pulling fs layer
+65c95cb8b3be: Pulling fs layer
+a36b708560f8: Pulling fs layer
+4090f912e6c7: Pulling fs layer
+ce5fe2607c2e: Pulling fs layer
+9400f5f657d6: Pulling fs layer
+3ccbeb634bca: Pulling fs layer
+4090f912e6c7: Waiting
+ce5fe2607c2e: Waiting
+9400f5f657d6: Waiting
+3ccbeb634bca: Waiting
+7f0334c36886: Waiting
+65c95cb8b3be: Waiting
+a36b708560f8: Waiting
+0a108aa26679: Verifying Checksum
+0a108aa26679: Download complete
+34d8874714d7: Verifying Checksum
+34d8874714d7: Download complete
+7f0334c36886: Verifying Checksum
+7f0334c36886: Download complete
+a36b708560f8: Verifying Checksum
+a36b708560f8: Download complete
+4090f912e6c7: Verifying Checksum
+4090f912e6c7: Download complete
+741437d97401: Download complete
+ce5fe2607c2e: Verifying Checksum
+ce5fe2607c2e: Download complete
+9400f5f657d6: Verifying Checksum
+9400f5f657d6: Download complete
+3ccbeb634bca: Verifying Checksum
+3ccbeb634bca: Download complete
+741437d97401: Pull complete
+65c95cb8b3be: Verifying Checksum
+65c95cb8b3be: Download complete
+34d8874714d7: Pull complete
+0a108aa26679: Pull complete
+7f0334c36886: Pull complete
+65c95cb8b3be: Pull complete
+a36b708560f8: Pull complete
+4090f912e6c7: Pull complete
+ce5fe2607c2e: Pull complete
+9400f5f657d6: Pull complete
+3ccbeb634bca: Pull complete
+Digest: sha256:0fe91ae116a340214cf013541bd311da7196d34a468e9daf74a8d0fdd3419c78
+Status: Downloaded newer image for devopsdockeruh/first_volume_exercise:latest
+(node:1) ExperimentalWarning: The fs.promises API is experimental
+Wrote to file /usr/app/logs.txt
+Wrote to file /usr/app/logs.txt
+Wrote to file /usr/app/logs.txt
+cat logs.txt
+Wed, 11 Sep 2019 18:44:51 GMT
+Wed, 11 Sep 2019 18:44:54 GMT
+Wed, 11 Sep 2019 18:44:57 GMT
