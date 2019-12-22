@@ -1,0 +1,16 @@
+version: "3.7"
+
+services:
+  webapp:
+    build:
+      context: ./frontti
+      dockerfile: Dockerfile
+    ports:
+      - 5000:5000
+
+  webapp2:
+    build:
+      context: ./backi
+      dockerfile: Dockerfile
+    ports:
+      - 8000:8000
